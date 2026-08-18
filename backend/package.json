@@ -1,0 +1,16 @@
+{
+  "name": "artconnect-backend",
+  "version": "1.0.0",
+  "description": "Backend server for ArtConnect",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Nam Nguyen",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
