@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // FAQ
     const faqQuestions =
         document.querySelectorAll(".faq-question");
 
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Form Input Focus
     const formFields = document.querySelectorAll(
         'input[type="text"], input[type="email"], input[type="number"], select, textarea'
     );
@@ -40,16 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Gallery Search
     const searchBox =
         document.querySelector("#gallery-search");
 
-    if (searchBox) {
+    const searchButton =
+        document.querySelector("#search-button");
+
+    if (searchBox && searchButton) {
 
         const artworkCards =
             document.querySelectorAll(".gallery-page .art-card");
 
-        searchBox.addEventListener("input", function () {
+        function searchArtwork() {
 
             const searchText =
                 searchBox.value.toLowerCase();
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     card.textContent.toLowerCase();
 
                 if (cardText.includes(searchText)) {
-                    card.style.display = "block";
+                    card.style.display = "flex";
                 }
                 else {
                     card.style.display = "none";
@@ -68,12 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
 
+        }
+
+        searchButton.addEventListener("click", searchArtwork);
+
+        searchBox.addEventListener("keyup", function (event) {
+
+            if (event.key === "Enter") {
+                searchArtwork();
+            }
+
         });
 
     }
 
 
-    // Artwork Image Enlargement
     const galleryImages =
         document.querySelectorAll(".gallery-page .art-card img");
 
@@ -120,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Event Details
     const eventButtons =
         document.querySelectorAll(".event-details-button");
 
@@ -149,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Submission Form
     const form =
         document.querySelector("#artwork-form");
 
@@ -318,25 +325,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const artwork = {
 
-                artist: artistName.value,
-                email: email.value,
-                title: artworkTitle.value,
-                category: category.value,
-                price: price.value,
-                description: description.value
+                artist:artistName.value,
+                email:email.value,
+                title:artworkTitle.value,
+                category:category.value,
+                price:price.value,
+                description:description.value
 
             };
 
 
             fetch("/api/artworks", {
 
-                method: "POST",
+                method:"POST",
 
-                headers: {
-                    "Content-Type": "application/json"
+                headers:{
+                    "Content-Type":"application/json"
                 },
 
-                body: JSON.stringify(artwork)
+                body:JSON.stringify(artwork)
 
             })
 

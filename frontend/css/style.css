@@ -71,6 +71,23 @@ section p{
     margin-bottom:15px;
 }
 
+.page-introduction{
+    text-align:center;
+}
+
+.page-introduction h2{
+    color:#8b5e3c;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.page-introduction p{
+    color:#555555;
+    font-size:18px;
+    max-width:800px;
+    margin:0 auto 15px auto;
+}
+
 strong{
     color:#8b5e3c;
 }
@@ -90,7 +107,8 @@ footer{
 
 .gallery-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(250px, 280px));
+    justify-content:center;
     gap:25px;
 }
 
@@ -303,6 +321,11 @@ button[type="reset"]:hover{
     background-color:#555555;
 }
 
+.form-buttons{
+    text-align:center;
+    margin-top:10px;
+}
+
 .error-message{
     color:red;
     font-size:14px;
@@ -313,7 +336,32 @@ button[type="reset"]:hover{
 #submission-message{
     color:green;
     font-weight:bold;
+    text-align:center;
+    font-size:18px;
     margin-top:20px;
+}
+
+#agreement-section{
+    background-color:#fff8e8;
+    border:2px solid #8b5e3c;
+    border-radius:8px;
+    padding:18px;
+    margin-top:25px;
+}
+
+#agreement-section .option-group{
+    margin-top:0;
+    align-items:flex-start;
+}
+
+#agreement-section input{
+    margin-top:6px;
+}
+
+#agreement-section label{
+    color:#333333;
+    font-weight:bold;
+    font-size:16px;
 }
 
 .faq-item{
@@ -333,6 +381,7 @@ button[type="reset"]:hover{
     text-align:left;
     font-size:16px;
     cursor:pointer;
+    margin:0;
 }
 
 .faq-question:hover{
@@ -373,14 +422,49 @@ button[type="reset"]:hover{
     margin-bottom:10px;
 }
 
-#gallery-search{
-    width:100%;
+#gallery-introduction{
+    margin-bottom:40px;
+}
+
+#gallery-search-section{
+    background-color:white;
+    border:1px solid #dddddd;
+    border-radius:8px;
+    padding:25px;
+    max-width:750px;
+    margin:0 auto 60px auto;
+    text-align:center;
+}
+
+#gallery-search-section h3{
+    color:#8b5e3c;
+    font-size:22px;
+    margin-top:0;
+    margin-bottom:8px;
+}
+
+#gallery-search-section p{
+    color:#666666;
+    margin-bottom:18px;
+}
+
+.search-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
     max-width:600px;
+    margin:auto;
+}
+
+#gallery-search{
+    flex:1;
+    width:100%;
     padding:12px;
     border:1px solid #cccccc;
     border-radius:5px;
     font-size:16px;
-    margin-top:10px;
+    margin:0;
 }
 
 #gallery-search:focus{
@@ -388,8 +472,43 @@ button[type="reset"]:hover{
     border:2px solid #8b5e3c;
 }
 
+#search-button{
+    margin:0;
+    padding:12px 22px;
+}
+
+#artwork-section{
+    margin-top:20px;
+}
+
+.gallery-page{
+    margin-top:10px;
+}
+
+.gallery-page .art-card{
+    display:flex;
+    flex-direction:column;
+    min-height:100%;
+}
+
 .gallery-page .art-card img{
     cursor:pointer;
+}
+
+.gallery-page .art-card h3{
+    font-size:20px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+.gallery-page .art-card p{
+    margin-bottom:7px;
+}
+
+.art-price{
+    margin-top:auto;
+    padding-top:10px;
+    border-top:1px solid #eeeeee;
 }
 
 #image-modal{
@@ -450,12 +569,14 @@ button[type="reset"]:hover{
     }
 
     .gallery-grid{
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns:repeat(2, minmax(250px, 280px));
+        justify-content:center;
     }
 
     .event-grid{
         grid-template-columns:repeat(2, 1fr);
     }
+
 }
 
 @media screen and (max-width:700px){
@@ -470,7 +591,8 @@ button[type="reset"]:hover{
     }
 
     .gallery-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:minmax(250px, 320px);
+        justify-content:center;
     }
 
     .event-grid{
@@ -493,6 +615,18 @@ button[type="reset"]:hover{
         width:220px;
     }
 
+    .search-container{
+        display:block;
+    }
+
+    #gallery-search{
+        margin-bottom:10px;
+    }
+
+    #search-button{
+        width:100%;
+    }
+
     #image-modal-content{
         width:95%;
     }
@@ -500,6 +634,7 @@ button[type="reset"]:hover{
     .event-details-button{
         width:100%;
     }
+
 }
 
 @media screen and (max-width:480px){
@@ -512,8 +647,16 @@ button[type="reset"]:hover{
         font-size:28px;
     }
 
-    section h2{
+    .page-introduction h2{
         font-size:24px;
+    }
+
+    .page-introduction p{
+        font-size:16px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
     }
 
     input[type="text"],
@@ -527,4 +670,5 @@ button[type="reset"]:hover{
     table{
         font-size:14px;
     }
+
 }

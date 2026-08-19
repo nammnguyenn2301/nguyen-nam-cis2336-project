@@ -6,18 +6,15 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
 
     <title>ArtConnect | Submit Artwork</title>
 
-    <link rel="stylesheet"
-          href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <script src="../js/script.js"
-            defer></script>
+    <script src="../js/script.js" defer></script>
 
 </head>
-
 
 <body>
 
@@ -31,66 +28,44 @@
 
     </header>
 
-
     <nav id="main_nav">
 
-        <a href="../index.html">
-            Home
-        </a>
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-        <a href="events.html">
-            Events
-        </a>
+        <a href="../index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
 
         <a href="submission.html"
-           id="current-page">
+            id="current-page">
             Submit Artwork
         </a>
 
-        <a href="faq.html">
-            FAQ
-        </a>
-
-        <a href="references.html">
-            References
-        </a>
+        <a href="faq.html">FAQ</a>
+        <a href="references.html">References</a>
 
     </nav>
 
-
     <main>
 
-        <section>
+        <section class="page-introduction">
 
             <h2>Submit Your Artwork</h2>
 
             <p>
-                Thank you for sharing your artwork with
-                ArtConnect. Fill out the form below to
-                submit your artwork.
+                Share your handmade artwork with the ArtConnect community.
             </p>
 
         </section>
 
-
         <section>
 
             <form id="artwork-form"
-                  action="#"
-                  method="get"
-                  novalidate>
-
+                action="#"
+                method="get"
+                novalidate>
 
                 <fieldset>
 
-                    <legend>
-                        Artist Information
-                    </legend>
-
+                    <legend>Artist Information</legend>
 
                     <label for="artist-name">
                         Artist Name *
@@ -102,11 +77,9 @@
                         name="artistName"
                         required>
 
-                    <p
-                        id="artist-name-error"
+                    <p id="artist-name-error"
                         class="error-message">
                     </p>
-
 
                     <label for="email">
                         Email Address *
@@ -118,11 +91,9 @@
                         name="email"
                         required>
 
-                    <p
-                        id="email-error"
+                    <p id="email-error"
                         class="error-message">
                     </p>
-
 
                     <label for="phone">
                         Phone Number
@@ -135,13 +106,9 @@
 
                 </fieldset>
 
-
                 <fieldset>
 
-                    <legend>
-                        Artwork Information
-                    </legend>
-
+                    <legend>Artwork Information</legend>
 
                     <label for="art-title">
                         Artwork Title *
@@ -153,11 +120,9 @@
                         name="artTitle"
                         required>
 
-                    <p
-                        id="art-title-error"
+                    <p id="art-title-error"
                         class="error-message">
                     </p>
-
 
                     <label for="category">
                         Category *
@@ -206,11 +171,9 @@
 
                     </select>
 
-                    <p
-                        id="category-error"
+                    <p id="category-error"
                         class="error-message">
                     </p>
-
 
                     <label for="materials">
                         Materials Used
@@ -220,7 +183,6 @@
                         type="text"
                         id="materials"
                         name="materials">
-
 
                     <label for="price">
                         Price ($) *
@@ -233,11 +195,9 @@
                         min="0"
                         required>
 
-                    <p
-                        id="price-error"
+                    <p id="price-error"
                         class="error-message">
                     </p>
-
 
                     <label for="art-image">
                         Upload Image
@@ -249,7 +209,6 @@
                         name="artImage"
                         accept="image/*">
 
-
                     <label for="description">
                         Description *
                     </label>
@@ -260,25 +219,17 @@
                         rows="6"
                         required></textarea>
 
-                    <p
-                        id="description-error"
+                    <p id="description-error"
                         class="error-message">
                     </p>
 
                 </fieldset>
 
-
                 <fieldset>
 
-                    <legend>
-                        Additional Information
-                    </legend>
+                    <legend>Additional Information</legend>
 
-
-                    <h3>
-                        Artwork Availability
-                    </h3>
-
+                    <h3>Artwork Availability</h3>
 
                     <div class="option-group">
 
@@ -295,7 +246,6 @@
 
                     </div>
 
-
                     <div class="option-group">
 
                         <input
@@ -310,11 +260,7 @@
 
                     </div>
 
-
-                    <h3>
-                        Artwork Features
-                    </h3>
-
+                    <h3>Artwork Features</h3>
 
                     <div class="option-group">
 
@@ -330,7 +276,6 @@
 
                     </div>
 
-
                     <div class="option-group">
 
                         <input
@@ -344,7 +289,6 @@
                         </label>
 
                     </div>
-
 
                     <div class="option-group">
 
@@ -360,70 +304,68 @@
 
                     </div>
 
+                    <div id="agreement-section">
 
-                    <div class="option-group">
+                        <div class="option-group">
 
-                        <input
-                            type="checkbox"
-                            id="agreement"
-                            name="agreement"
-                            required>
+                            <input
+                                type="checkbox"
+                                id="agreement"
+                                name="agreement"
+                                required>
 
-                        <label for="agreement">
-                            I confirm that this artwork is my
-                            own work and I agree to share it
-                            on ArtConnect.
-                        </label>
+                            <label for="agreement">
+                                I confirm that this artwork is my own work
+                                and I agree to share it on ArtConnect.
+                            </label>
+
+                        </div>
+
+                        <p id="agreement-error"
+                            class="error-message">
+                        </p>
 
                     </div>
 
-                    <p
-                        id="agreement-error"
-                        class="error-message">
-                    </p>
-
                 </fieldset>
 
+                <div class="form-buttons">
 
-                <button
-                    type="submit"
-                    id="submit-button">
-                    Submit Artwork
-                </button>
+                    <button
+                        type="submit"
+                        id="submit-button">
+                        Submit Artwork
+                    </button>
 
+                    <button
+                        type="reset"
+                        id="reset-button">
+                        Reset Form
+                    </button>
 
-                <button
-                    type="reset"
-                    id="reset-button">
-                    Reset Form
-                </button>
+                </div>
 
             </form>
 
         </section>
 
-
-        <section>
+        <section class="page-introduction">
 
             <h2>Thank You!</h2>
 
             <p>
-                Thank you for submitting your artwork.
-                We are excited to see your creativity
-                and appreciate you being part of the
-                ArtConnect community.
+                Thank you for sharing your creativity with ArtConnect.
+                We appreciate you being part of our community.
             </p>
 
         </section>
 
     </main>
 
-
     <footer>
 
         <p>
-            &copy; 2026 ArtConnect |
-            CIS 2336 Individual Project
+            &copy; 2026 ArtConnect | CIS 2336 Individual Project
         </p>
 
     </footer>
