@@ -4,20 +4,15 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
 
     <title>ArtConnect | Submit Artwork</title>
 
-    <link rel="stylesheet"
-          href="../css/style.css">
-
-    <script src="../js/script.js"
-            defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 
 </head>
-
 
 <body>
 
@@ -31,36 +26,18 @@
 
     </header>
 
-
     <nav id="main_nav">
 
-        <a href="../index.html">
-            Home
-        </a>
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-        <a href="events.html">
-            Events
-        </a>
-
-        <a href="submission.html"
-           id="current-page">
+        <a href="../index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="submission.html" id="current-page">
             Submit Artwork
         </a>
-
-        <a href="faq.html">
-            FAQ
-        </a>
-
-        <a href="references.html">
-            References
-        </a>
+        <a href="faq.html">FAQ</a>
+        <a href="references.html">References</a>
 
     </nav>
-
 
     <main>
 
@@ -69,28 +46,23 @@
             <h2>Submit Your Artwork</h2>
 
             <p>
-                Thank you for sharing your artwork with
-                ArtConnect. Fill out the form below to
-                submit your artwork.
+
+                Thank you for sharing your artwork with ArtConnect.
+                Fill out the form below to submit your artwork.
+
             </p>
 
         </section>
 
-
         <section>
 
             <form id="artwork-form"
-                  action="#"
-                  method="get"
-                  novalidate>
-
+                action="#"
+                method="get">
 
                 <fieldset>
 
-                    <legend>
-                        Artist Information
-                    </legend>
-
+                    <legend>Artist Information</legend>
 
                     <label for="artist-name">
                         Artist Name *
@@ -100,13 +72,8 @@
                         type="text"
                         id="artist-name"
                         name="artistName"
-                        required>
-
-                    <p
-                        id="artist-name-error"
-                        class="error-message">
-                    </p>
-
+                        required
+                    >
 
                     <label for="email">
                         Email Address *
@@ -116,13 +83,8 @@
                         type="email"
                         id="email"
                         name="email"
-                        required>
-
-                    <p
-                        id="email-error"
-                        class="error-message">
-                    </p>
-
+                        required
+                    >
 
                     <label for="phone">
                         Phone Number
@@ -131,17 +93,14 @@
                     <input
                         type="text"
                         id="phone"
-                        name="phone">
+                        name="phone"
+                    >
 
                 </fieldset>
 
-
                 <fieldset>
 
-                    <legend>
-                        Artwork Information
-                    </legend>
-
+                    <legend>Artwork Information</legend>
 
                     <label for="art-title">
                         Artwork Title *
@@ -151,26 +110,16 @@
                         type="text"
                         id="art-title"
                         name="artTitle"
-                        required>
-
-                    <p
-                        id="art-title-error"
-                        class="error-message">
-                    </p>
-
+                        required
+                    >
 
                     <label for="category">
-                        Category *
+                        Category
                     </label>
 
                     <select
                         id="category"
-                        name="category"
-                        required>
-
-                        <option value="">
-                            Select a Category
-                        </option>
+                        name="category">
 
                         <option value="painting">
                             Painting
@@ -206,12 +155,6 @@
 
                     </select>
 
-                    <p
-                        id="category-error"
-                        class="error-message">
-                    </p>
-
-
                     <label for="materials">
                         Materials Used
                     </label>
@@ -219,11 +162,11 @@
                     <input
                         type="text"
                         id="materials"
-                        name="materials">
-
+                        name="materials"
+                    >
 
                     <label for="price">
-                        Price ($) *
+                        Price ($)
                     </label>
 
                     <input
@@ -231,13 +174,7 @@
                         id="price"
                         name="price"
                         min="0"
-                        required>
-
-                    <p
-                        id="price-error"
-                        class="error-message">
-                    </p>
-
+                    >
 
                     <label for="art-image">
                         Upload Image
@@ -247,38 +184,25 @@
                         type="file"
                         id="art-image"
                         name="artImage"
-                        accept="image/*">
-
+                        accept="image/*"
+                    >
 
                     <label for="description">
-                        Description *
+                        Description
                     </label>
 
                     <textarea
                         id="description"
                         name="description"
                         rows="6"
-                        required></textarea>
-
-                    <p
-                        id="description-error"
-                        class="error-message">
-                    </p>
+                    ></textarea>
 
                 </fieldset>
+                                <fieldset>
 
+                    <legend>Additional Information</legend>
 
-                <fieldset>
-
-                    <legend>
-                        Additional Information
-                    </legend>
-
-
-                    <h3>
-                        Artwork Availability
-                    </h3>
-
+                    <h3>Artwork Availability</h3>
 
                     <div class="option-group">
 
@@ -287,7 +211,8 @@
                             id="available"
                             name="availability"
                             value="available"
-                            checked>
+                            checked
+                        >
 
                         <label for="available">
                             Available
@@ -295,14 +220,14 @@
 
                     </div>
 
-
                     <div class="option-group">
 
                         <input
                             type="radio"
                             id="sold"
                             name="availability"
-                            value="sold">
+                            value="sold"
+                        >
 
                         <label for="sold">
                             Sold
@@ -310,11 +235,7 @@
 
                     </div>
 
-
-                    <h3>
-                        Artwork Features
-                    </h3>
-
+                    <h3>Artwork Features</h3>
 
                     <div class="option-group">
 
@@ -322,7 +243,8 @@
                             type="checkbox"
                             id="handmade"
                             name="features"
-                            value="handmade">
+                            value="handmade"
+                        >
 
                         <label for="handmade">
                             Handmade
@@ -330,14 +252,14 @@
 
                     </div>
 
-
                     <div class="option-group">
 
                         <input
                             type="checkbox"
                             id="custom-order"
                             name="features"
-                            value="custom-order">
+                            value="custom-order"
+                        >
 
                         <label for="custom-order">
                             Custom Orders Available
@@ -345,14 +267,14 @@
 
                     </div>
 
-
                     <div class="option-group">
 
                         <input
                             type="checkbox"
                             id="shipping"
                             name="features"
-                            value="shipping">
+                            value="shipping"
+                        >
 
                         <label for="shipping">
                             Shipping Available
@@ -360,41 +282,35 @@
 
                     </div>
 
-
                     <div class="option-group">
 
                         <input
                             type="checkbox"
                             id="agreement"
                             name="agreement"
-                            required>
+                            required
+                        >
 
                         <label for="agreement">
-                            I confirm that this artwork is my
-                            own work and I agree to share it
-                            on ArtConnect.
+                            I confirm that this artwork is my own work
+                            and I agree to share it on ArtConnect.
                         </label>
 
                     </div>
 
-                    <p
-                        id="agreement-error"
-                        class="error-message">
-                    </p>
-
                 </fieldset>
-
 
                 <button
                     type="submit"
-                    id="submit-button">
+                    id="submit-button"
+                >
                     Submit Artwork
                 </button>
 
-
                 <button
                     type="reset"
-                    id="reset-button">
+                    id="reset-button"
+                >
                     Reset Form
                 </button>
 
@@ -402,28 +318,29 @@
 
         </section>
 
-
         <section>
 
             <h2>Thank You!</h2>
 
             <p>
+
                 Thank you for submitting your artwork.
-                We are excited to see your creativity
-                and appreciate you being part of the
-                ArtConnect community.
+                We are excited to see your creativity and
+                appreciate you being part of the ArtConnect
+                community.
+
             </p>
 
         </section>
 
     </main>
 
-
     <footer>
 
         <p>
-            &copy; 2026 ArtConnect |
-            CIS 2336 Individual Project
+
+            &copy; 2026 ArtConnect | CIS 2336 Individual Project
+
         </p>
 
     </footer>
