@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".faq-question");
 
     for (let question of faqQuestions) {
+
         question.addEventListener("click", function () {
+
             const answer =
                 question.nextElementSibling;
 
@@ -15,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             else {
                 answer.style.display = "block";
             }
+
         });
     }
 
@@ -25,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     for (let field of formFields) {
+
         field.addEventListener("focus", function () {
             field.style.backgroundColor = "#fff8e8";
         });
@@ -32,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         field.addEventListener("blur", function () {
             field.style.backgroundColor = "white";
         });
+
     }
 
 
@@ -60,8 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 else {
                     card.style.display = "none";
                 }
+
             }
+
         });
+
     }
 
 
@@ -92,7 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 imageCaption.textContent = image.alt;
 
                 imageModal.style.display = "flex";
+
             });
+
         }
 
         closeImage.addEventListener("click", function () {
@@ -104,7 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (event.target === imageModal) {
                 imageModal.style.display = "none";
             }
+
         });
+
     }
 
 
@@ -123,13 +135,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 details.style.display = "none";
                 button.textContent = "View Details";
+
             }
             else {
 
                 details.style.display = "block";
                 button.textContent = "Hide Details";
+
             }
+
         });
+
     }
 
 
@@ -205,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Please enter your name.";
 
                 valid = false;
+
             }
 
 
@@ -214,6 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Please enter your email address.";
 
                 valid = false;
+
             }
             else {
 
@@ -226,7 +244,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         "Please enter a valid email address.";
 
                     valid = false;
+
                 }
+
             }
 
 
@@ -236,6 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Please enter the artwork title.";
 
                 valid = false;
+
             }
 
 
@@ -245,6 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Please select a category.";
 
                 valid = false;
+
             }
 
 
@@ -254,10 +276,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Please enter the artwork price.";
 
                 valid = false;
+
             }
             else if (
                 isNaN(parseFloat(price.value)) ||
-                !isFinite(price.value) ||
                 parseFloat(price.value) < 0
             ) {
 
@@ -265,6 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Price must be a nonnegative number.";
 
                 valid = false;
+
             }
 
 
@@ -274,6 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Please enter an artwork description.";
 
                 valid = false;
+
             }
 
 
@@ -283,6 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "You must agree before submitting.";
 
                 valid = false;
+
             }
 
 
@@ -291,26 +316,72 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            const oldMessage =
-                document.querySelector("#submission-message");
+            const artwork = {
 
-            if (oldMessage) {
-                oldMessage.remove();
-            }
+                artist: artistName.value,
+                email: email.value,
+                title: artworkTitle.value,
+                category: category.value,
+                price: price.value,
+                description: description.value
+
+            };
 
 
-            const message =
-                document.createElement("p");
+            fetch("/api/artworks", {
 
-            message.id = "submission-message";
+                method: "POST",
 
-            message.textContent =
-                "Thank you! Your artwork has been submitted successfully.";
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-            form.after(message);
+                body: JSON.stringify(artwork)
 
-            form.reset();
+            })
+
+            .then(function (response) {
+
+                return response.json();
+
+            })
+
+            .then(function (data) {
+
+                const oldMessage =
+                    document.querySelector("#submission-message");
+
+                if (oldMessage) {
+                    oldMessage.remove();
+                }
+
+
+                const message =
+                    document.createElement("p");
+
+                message.id =
+                    "submission-message";
+
+                message.textContent =
+                    data.message;
+
+                form.after(message);
+
+                form.reset();
+
+            })
+
+            .catch(function (error) {
+
+                console.log(
+                    "Error submitting artwork:",
+                    error
+                );
+
+            });
+
         });
+
     }
 
 });

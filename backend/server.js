@@ -1,10 +1,15 @@
 const express = require("express");
+const path = require("path");
 
 const app = express();
 const port = 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+
+app.use(express.static(
+    path.join(__dirname, "../frontend")
+));
 
 let artworks = [
     {
@@ -35,14 +40,6 @@ let artworks = [
         description:"A handmade scrapbook kit for creative projects."
     }
 ];
-
-app.get("/", function(request, response){
-
-    response.json({
-        message:"Welcome to the ArtConnect backend."
-    });
-
-});
 
 app.get("/api/artworks", function(request, response){
 

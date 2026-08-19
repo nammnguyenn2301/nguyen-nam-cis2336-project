@@ -4,11 +4,14 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>ArtConnect | Gallery</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
     <script src="../js/script.js" defer></script>
 
 </head>
@@ -28,32 +31,61 @@
     <nav id="main_nav">
 
         <a href="../index.html">Home</a>
+
         <a href="gallery.html" id="current-page">Gallery</a>
+
         <a href="events.html">Events</a>
+
         <a href="submission.html">Submit Artwork</a>
+
         <a href="faq.html">FAQ</a>
+
         <a href="references.html">References</a>
 
     </nav>
 
     <main>
 
-        <section id="gallery-introduction">
+        <section id="gallery-introduction"
+            class="page-introduction">
 
             <h2>Artwork Gallery</h2>
 
             <p>
-
-                Take a look at handmade artwork created by talented local
-                artists. Every piece is made with care and creativity.
-
+                Take a look at handmade artwork created by talented
+                local artists. Every piece is made with care and creativity.
             </p>
 
         </section>
 
-        <section>
+        <section id="gallery-search-section">
 
-            <div class="gallery-grid">
+            <h3>Find Artwork</h3>
+
+            <p>
+                Search by artwork title, artist name, or category.
+            </p>
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="gallery-search"
+                    placeholder="Search artwork">
+
+                <button
+                    type="button"
+                    id="search-button">
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="artwork-section">
+
+            <div class="gallery-grid gallery-page">
 
                 <article class="art-card">
 
@@ -62,11 +94,20 @@
 
                     <h3>Handmade Wooden Dolls</h3>
 
-                    <p><strong>Artist:</strong> Emma Carter</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Emma Carter
+                    </p>
 
-                    <p><strong>Category:</strong> Wooden Crafts</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Wooden Crafts
+                    </p>
 
-                    <p><strong>Price:</strong> $28</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $28
+                    </p>
 
                 </article>
 
@@ -77,11 +118,20 @@
 
                     <h3>Handmade Jewelry Collection</h3>
 
-                    <p><strong>Artist:</strong> Sophia Nguyen</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Sophia Nguyen
+                    </p>
 
-                    <p><strong>Category:</strong> Jewelry</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Jewelry
+                    </p>
 
-                    <p><strong>Price:</strong> $35</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $35
+                    </p>
 
                 </article>
 
@@ -92,11 +142,20 @@
 
                     <h3>DIY Scrapbook Kit</h3>
 
-                    <p><strong>Artist:</strong> Olivia Brown</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Olivia Brown
+                    </p>
 
-                    <p><strong>Category:</strong> Paper Crafts</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Paper Crafts
+                    </p>
 
-                    <p><strong>Price:</strong> $18</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $18
+                    </p>
 
                 </article>
 
@@ -107,11 +166,20 @@
 
                     <h3>Watercolor Bunny Painting</h3>
 
-                    <p><strong>Artist:</strong> Daniel Lee</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Daniel Lee
+                    </p>
 
-                    <p><strong>Category:</strong> Painting</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Painting
+                    </p>
 
-                    <p><strong>Price:</strong> $40</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $40
+                    </p>
 
                 </article>
 
@@ -122,25 +190,44 @@
 
                     <h3>Hand-Carved Wooden Bowls</h3>
 
-                    <p><strong>Artist:</strong> Noah Wilson</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Noah Wilson
+                    </p>
 
-                    <p><strong>Category:</strong> Woodworking</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Woodworking
+                    </p>
 
-                    <p><strong>Price:</strong> $48</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $48
+                    </p>
 
                 </article>
-                                <article class="art-card">
+
+                <article class="art-card">
 
                     <img src="../images/art6.jpg"
                         alt="Hand-Painted Ceramic Collection">
 
                     <h3>Hand-Painted Ceramic Collection</h3>
 
-                    <p><strong>Artist:</strong> Mia Johnson</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Mia Johnson
+                    </p>
 
-                    <p><strong>Category:</strong> Ceramics</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Ceramics
+                    </p>
 
-                    <p><strong>Price:</strong> $55</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $55
+                    </p>
 
                 </article>
 
@@ -151,11 +238,20 @@
 
                     <h3>Ceramic Candle Holder</h3>
 
-                    <p><strong>Artist:</strong> Emily Davis</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Emily Davis
+                    </p>
 
-                    <p><strong>Category:</strong> Pottery</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Pottery
+                    </p>
 
-                    <p><strong>Price:</strong> $24</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $24
+                    </p>
 
                 </article>
 
@@ -166,11 +262,20 @@
 
                     <h3>Crochet Animal Collection</h3>
 
-                    <p><strong>Artist:</strong> Grace Taylor</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Grace Taylor
+                    </p>
 
-                    <p><strong>Category:</strong> Crochet</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Crochet
+                    </p>
 
-                    <p><strong>Price:</strong> $32</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $32
+                    </p>
 
                 </article>
 
@@ -181,11 +286,20 @@
 
                     <h3>Handwoven Basket Collection</h3>
 
-                    <p><strong>Artist:</strong> Ethan Moore</p>
+                    <p>
+                        <strong>Artist:</strong>
+                        Ethan Moore
+                    </p>
 
-                    <p><strong>Category:</strong> Basket Weaving</p>
+                    <p>
+                        <strong>Category:</strong>
+                        Basket Weaving
+                    </p>
 
-                    <p><strong>Price:</strong> $45</p>
+                    <p class="art-price">
+                        <strong>Price:</strong>
+                        $45
+                    </p>
 
                 </article>
 
@@ -195,12 +309,31 @@
 
     </main>
 
+    <div id="image-modal">
+
+        <div id="image-modal-content">
+
+            <button
+                type="button"
+                id="close-image">
+                Close
+            </button>
+
+            <img
+                id="large-image"
+                src="../images/art1.jpg"
+                alt="Selected artwork">
+
+            <p id="image-caption"></p>
+
+        </div>
+
+    </div>
+
     <footer>
 
         <p>
-
             &copy; 2026 ArtConnect | CIS 2336 Individual Project
-
         </p>
 
     </footer>
